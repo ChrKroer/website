@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Christian Kroer's random notes to remember</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Christian Kroer</a>
+        </div>
+	<nav class='navbar-collapse collapse'>
+          <ul class='nav navbar-nav'>
+            <li>
+              <a href='research.html'>Research</a>
+            </li>
+            <li>
+              <a href='publications.html'>Publications</a>
+            </li>
+            <li>
+              <a href='teaching.html'>Teaching</a>
+            </li>
+            <li>
+              <a href='files/christian_kroer_cv.pdf'>Resume</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class='header-jumbo'>
+          <h1>Useful notes for things that I keep forgetting</h1>
+          <ul class='list-inline'>
+            <li>
+              <a href='#latex'>
+                <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                Latex
+              </a>
+	    </li>
+	    <li>
+              <a href='#emacs'>
+                <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                Emacs
+              </a>
+	    </li>
+	    <li>
+              <a href='#R'>
+                <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                R language
+              </a>
+            </li>
+          </ul>
+        </div>
+      <!-- Example row of columns -->
+
+      <a name="latex"></a>
+      <div class="row featurette">
+        <div class="col-md-8">
+	  <h2 class='featurette-heading'>Latex</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Latexmk continuously compile on save:</b> latexmk -pvc file.tex
+	  </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Embed fonts in pdf the hard way, using ghostscript:</b>    gs -dSAFER -dNOPLATFONTS -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPAPERSIZE=letter -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dCompatibilityLevel=1.4 -dMaxSubsetPct=100 -dSubsetFonts=true -dEmbedAllFonts=true -dUseCIEColor -sOutputFile=newFilename -f initialPdfName
+	  </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Authoryear style citation with brackets:</b>   <a href="http://tex.stackexchange.com/a/16792/11839">tex.stackexchange</a>, also see IJCAI15 paper.
+	  </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Biblatex remove bib fields::</b> \AtEveryBibItem{ \clearfield{pages}}   <a href="http://tex.stackexchange.com/questions/187643/biblatex-how-can-i-suppress-some-fields-for-multiple-entry-types">tex.stackexchange</a>.
+	  </p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Latex Emacs color bleed:</b>   <a href="http://tex.stackexchange.com/questions/30117/annoyance-in-emacs-latex-mode-involved-with-syntax-highlighting">tex.stackexchange</a>, TLDR: try inserting %$ at EOL.
+	  </p>
+        </div>
+      </div>
+      <hr class='featurette-divider'>
+
+      <a name="emacs"></a>
+      <div class="row featurette">
+        <div class="col-md-8">
+	  <h2 class='featurette-heading'>Emacs</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Edit remote file:</b> C-x C-f /host:path_to_file (alternatively /user@host:path_to_file)
+	  </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Set mark:</b> 'C-SPC'
+	    <b>Go to mark:</b> 'C-u C-SPC'	    
+	  </p>
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Start Eclim:</b> /Users/ckroer/install/eclipse/Eclipse\ 2.app/Contents/Eclipse/eclimd
+	  </p>
+        </div>
+      </div>
+
+
+
+      <hr class='featurette-divider'>
+
+      <a name="R"></a>
+      <div class="row featurette">
+        <div class="col-md-8">
+	  <h2 class='featurette-heading'>R language</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Load CSV files:</b> matrix_name <- as.matrix(read.csv(file="~/path/to/file", sep=",", header=TRUE))
+	  </p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Count frequencies of elements in list:</b> t=table(l), where l is the list (this can run into floating point issues since numbers are handled by conversion to string).
+	  </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Install package:</b> install.packages("name")
+	  </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    <b>Include package:</b> library("name")
+	  </p>
+        </div>
+      </div>
+
+
+      <hr class='featurette-divider'>
+
+
+      <footer>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

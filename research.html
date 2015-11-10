@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Christian Kroer's research</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Christian Kroer</a>
+        </div>
+	<nav class='navbar-collapse collapse'>
+          <ul class='nav navbar-nav'>
+            <li>
+              <a href='research.html'>Research</a>
+            </li>
+            <li>
+              <a href='publications.html'>Publications</a>
+            </li>
+            <li>
+              <a href='teaching.html'>Teaching</a>
+            </li>
+            <li>
+              <a href='files/christian_kroer_cv.pdf'>Resume</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class='header-jumbo'>
+          <h1>Research</h1>
+          <ul class='list-inline'>
+            <li>
+              <a href='#equilibrium'>
+                <span class='glyphicon glyphicon-circle-arrow-down'></span>
+                Equilibrium finding
+              </a>
+            </li>            <li>
+              <a href='#abstraction'>
+                <span class='glyphicon glyphicon-circle-arrow-down'></span>
+                Game Abstraction and Discretization
+              </a>
+            </li>
+            <li>
+              <a href='#auctions'>
+                <span class='glyphicon glyphicon-circle-arrow-down'></span>
+                Revenue Maximization
+              </a>
+            </li>
+            <li>
+              <a href='#containers'>
+                <span class='glyphicon glyphicon-circle-arrow-down'></span>
+                Optimization For Container Shipping
+              </a>
+            </li>
+          </ul>
+        </div>
+      <!-- Example row of columns -->
+      <a name='equilibrium'></a>
+      <hr class='featurette-divider'>
+      <div class="row featurette">
+        <div class="col-md-8">
+	  <h2 class='featurette-heading'>Equilibrium-Finding in Large Sequential Games</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+In this line of work, we study the problem of computing a Nash equilibrium in large-scale two-player zero-sum extensive-form games. While this problem can be solved in polynomial time, first-order or regret-based methods are usually preferred for large games. Regret-based methods have largely been favored in practice, in spite of their inferior convergence rates. We investigate the acceleration of first-order methods both theoretically and experimentally. An important component of many first-order methods is a distance-generating function. Motivated by this, we investigate a specific distance-generating function, namely the dilated entropy function, over treeplexes, which are convex polytopes that encompass the strategy spaces of perfect-recall extensive-form games. We develop significantly stronger bounds on the associated strong convexity parameter. In terms of extensive-form game solving, this significantly improves the convergence rate of several first-order methods.
+
+  Experimentally, we investigate the performance of three first-order methods (the excessive gap technique, mirror prox, and stochastic mirror prox) and compare their performance to the regret-based algorithms. In order to instantiate stochastic mirror prox, we develop a class of gradient sampling schemes for game trees.  Equipped with our distance-generating function and sampling scheme, we find that mirror prox and the excessive gap technique outperform the prior regret-based methods for finding medium accuracy solution. Read more about this work <a href="papers/faster_first_order_efg_ec15.pdf">here</a>.
+	  </p>
+        </div>
+	<!-- <div class='col-md-4'> -->
+        <!--   <img alt='Abstraction.' class='featurette-image img-responsive pagination-centered text-center center-y' src='img/fourth_coarsest.png'> -->
+	<!-- </div> -->
+      </div>
+
+      <a name='abstraction'></a>
+      <hr class='featurette-divider'>
+      <div class="row featurette">
+        <div class="col-md-8">
+	  <h2 class='featurette-heading'>Game Abstraction and Discretization</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    Extensive-form games are a broad class of games that can be used to model many strategic scenarios. For two-player, zero-sum games, polynomial time algorithms are known for computing Nash equilibria. However, even in these games with polynomial time algorithms, practical problems are often so large that they don't even fit in memory. Thus, abstraction has emerged as a key component in solving large-scale extensive-form games. Lossless abstraction is preferred, but often, even these are too large to solve, so lossy abstraction is needed. In this work, we are developing the first theoretical framework that can give bounds on solution quality when equilibria computed in the abstract game are implemented in the original game. Read more about this work  <a href="papers/abstractionEC14-extended.pdf">here</a> (perfect-recall games) and <a href="http://arxiv.org/abs/1409.3302">here</a> (imperfect-recall games). 
+	  </p>
+	  <p>
+	    Some practical games have continuous action spaces, while equilibrium-finding algorithms usually require a finite discrete game. Using the theoretical results from my EC14 paper, we have developed a framework for obtaining bounds on solution quality when discretizing extensive-form games with continuous action spaces. Read more about this <a href="papers/discretization_of_continuous_action_spaces_aamas15.pdf">here</a>
+	  </p>
+        </div>
+	<div class='col-md-4'>
+          <img alt='Abstraction.' class='featurette-image img-responsive pagination-centered text-center center-y' src='img/fourth_coarsest.png'>
+	</div>
+      </div>
+
+      <a name='auctions'></a>
+      <hr class='featurette-divider'>
+      <div class="row featurette">
+        <div class="col-md-8">
+	  <h2 class='featurette-heading'>Revenue Maximization in Auctions</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    Revenue maximization in combinatorial auctions (and other multidimensional selling settings) is an important and elusive problem. The optimal design is unknown, and is known to include features that are not acceptable in many applications, such as favoring some bidders over others and randomization. In our work, we study practical revenue maximization techniques, that avoid these features. In our initial work, we studied the technique of bundling in the context of Vickrey-Clarke-Groves (VCG) mechanisms. We showed that computing the optimal bundling is NP-hard, even for a setting where computing the social welfare maximizing allocation is trivial. We then developed a custom branch-and-bound algorithm for computing the optimal bundling. This involved introducing several techniques for branching, upper bounding, and lower bounding intermediate solutions. Read more about this work  <a href="papers/bundling_tech_report.pdf">here</a>.
+	  </p>
+	  
+        </div>
+	<div class='col-md-4'>
+          <img alt='auction' class='featurette-image img-responsive pagination-centered text-center center-y' src='img/auction-gavel-2.jpg'>
+	</div>
+      </div>
+
+      <a name='containers'></a>
+      <hr class='featurette-divider'>
+      <div class="row featurette">
+        <div class="col-md-8">
+	  <h2 class='featurette-heading'>Optimization in Container Shipping</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+	  <p>
+	    Efficient containerized shipping is essential for the global economy, and relies on high-quality stowage plans that maximize cargo yield while reducing sailing speed and port fees by minimizing port stays. In this work, we investigated how to apply tools from artificial intelligence and optimization to two problems in this realm.
+	  </p>
+	  <p>
+	    In one line of work, we developed three different optimization approaches for computing optimal or near-optimal shipping network redesigns when new routes are introduced in a global shipping network. Read more about this in our ICAPS 2012 <a href="papers/fleetrepos-icaps2012.pdf">paper</a>.
+	  </p>
+	  <p>
+	  In a second line of work, we investigated how to apply SAT, SMT, and BDD-based solvers to interactive stowage configuration. In practical stowage planning, unforeseen constraints often arise. In such cases, stowage planners manually redesign the stowage plan. In this work, we developed tools to help guide the stowage planner towards optimal solutions, by only ever presenting the user with valid steps in the stowage redesign process. In order to do this, we must solve a series of hard combinatorial configuration problems. A GUI prototype is shown to the right. A <a href="papers/interactive-stowage.pdf">journal article</a> based on this work was recently accepted for publication in Computational Intelligence. You can also read more about it in my <a href="papers/KroerSvendsen12.pdf">Master's thesis</a>.
+	  </p>
+	  <p>
+	    One interesting observation from our stowage redesign work, was that BDD-based solving performed much better than SAT-based solving. This is contrary to much work in the very similar realm of verification, where SAT-based solving has reigned supreme in recent years. We hypothesize that this is because we solve a series of configuration problems, that all differ by a small amount. This is somewhat akin to taking a random walk around the space of the original SAT instance, making small tweaks to the formula. In our experiments, we saw that the SAT-based approach was almost always much faster than the BDD-based approach for any single instance. But across the many different perturbations of the problem (representing iteratively assigning containers), the SAT solver would eventually encounter an instance it timed out on. This begs the more general question of whether such behavior can be oberved across other types of combinatorial problems. If this problem stokes your interest, I would be happy to hear from you, and discuss a possible joint investigation. My <a href="papers/KroerSvendsen12.pdf">Master's thesis</a> contains a fairly comprehensive investigation of this issue for container stowage.
+	  </p>
+        </div>
+	<div class='col-md-4'>
+          <img alt='container' class='featurette-image img-responsive pagination-centered text-center center-y' src='img/screenShot2.png'>
+	</div>
+      </div>
+
+
+      <footer>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
