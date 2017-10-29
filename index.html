@@ -12,7 +12,7 @@
     <title>Christian Kroer's website</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/jumbotron.css" rel="stylesheet">
@@ -49,7 +49,7 @@
               <a href='teaching.html'>Teaching</a>
             </li>
             <li>
-              <a href='files/christian_kroer_cv.pdf'>Resume</a>
+              <a href='files/christian_kroer_cv.pdf'>CV</a>
             </li>
           </ul>
         </nav>
@@ -58,6 +58,7 @@
 
     <div class="jumbotron">
       <div class="container">
+        <div class="col-md-8" >
         <!--h2>Hello, world!</h2-->
         <p>
           My name is Christian Kroer. I am a Ph.D. student in Computer Science
@@ -93,9 +94,10 @@
         <p>
           Some of my code can be found on <a href='https://github.com/ChrKroer'>GitHub</a>.
         </p>
-        <p>
-          My e-mail is ckroer AT cs.cmu.edu
-        </p>
+        </div>
+        <div class='col-md-4'>
+          <img alt='Christian Kroer' class='featurette-image img-responsive' src='img/CMU_pic_small.jpg'>
+        </div>
       </div>
     </div>
 
@@ -109,7 +111,7 @@
           <p>
             <small>
               <em>
-                This fall I will be at INFORMS, NIPS, Duke, AAAI, and Facebook.
+                This fall and winter I will be at INFORMS, NIPS, Duke, AAAI, and Facebook.
               </em>
             </small>
           </p>
@@ -129,7 +131,12 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Research</h2>
-          <p>My research lies at the intersection of computer science and economics. It is concerned with problems such as how to compute Nash equilibria in large-scale games and maximizing revenue in auctions. </p>
+          <p>
+            My research lies at the intersection of computer science, operations
+            research, and economics. It is concerned with problems such as how
+            to compute Nash equilibria in large-scale games and facilitating
+            large-scale markets via optimization.
+          </p>
           <p><a class="btn btn-default" href="publications.html" role="button">View publications&raquo;</a></p>
         </div>
         <div class="col-md-4">
