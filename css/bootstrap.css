@@ -4366,7 +4366,8 @@ a.list-group-item.active > .badge,
 }
 .jumbotron {
   padding: 30px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   color: inherit;
   /* background-color: #eee; */
 }
@@ -4387,12 +4388,10 @@ a.list-group-item.active > .badge,
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .container .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
@@ -4400,10 +4399,8 @@ a.list-group-item.active > .badge,
   }
 }
 .mini-jumbo {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 0px;
 }
 .thumbnail {
   display: block;
@@ -5791,5 +5788,6 @@ button.close {
 .center-x {
   width: 100%;
   margin-left: 0px;
+  padding-left: 0px;
 }
 /*# sourceMappingURL=bootstrap.css.map */
