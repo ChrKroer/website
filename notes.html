@@ -40,7 +40,7 @@
           </button>
           <a class="navbar-brand" href="index.html">Christian Kroer</a>
         </div>
-	<nav class='navbar-collapse collapse'>
+        <nav class='navbar-collapse collapse'>
           <ul class='nav navbar-nav'>
             <li>
               <a href='research.html'>Research</a>
@@ -62,82 +62,82 @@
 
     <div class="container">
       <div class='header-jumbo'>
-          <h1>Useful notes for things that I keep forgetting</h1>
-          <ul class='list-inline'>
-            <li>
-              <a href='#latex'>
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>
-                Latex
-              </a>
-	    </li>
-	    <li>
-              <a href='#emacs'>
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>
-                Emacs
-              </a>
-	    </li>
-	    <li>
-              <a href='#R'>
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>
-                R language
-              </a>
-            </li>
-          </ul>
-        </div>
+        <h1>Useful notes for things that I keep forgetting</h1>
+        <ul class='list-inline'>
+          <li>
+            <a href='#latex'>
+              <span class="glyphicon glyphicon-circle-arrow-down"></span>
+              Latex
+            </a>
+          </li>
+          <li>
+            <a href='#emacs'>
+              <span class="glyphicon glyphicon-circle-arrow-down"></span>
+              Emacs
+            </a>
+          </li>
+          <li>
+            <a href='#R'>
+              <span class="glyphicon glyphicon-circle-arrow-down"></span>
+              R language
+            </a>
+          </li>
+        </ul>
+      </div>
       <!-- Example row of columns -->
 
       <a name="latex"></a>
       <div class="row featurette">
         <div class="col-md-8">
-	  <h2 class='featurette-heading'>Latex</h2>
+          <h2 class='featurette-heading'>Latex</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Decrease space usage for long subscripts:</b> use \mathrlap (and \includepackage{mathtools})
-	  </p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8">
-	  <p>
-	    <b>Latexmk continuously compile on save:</b> latexmk -pvc file.tex
-	  </p>
+          <p>
+            <b>Decrease space usage for long subscripts:</b> use \mathclap (and \includepackage{mathtools}). \mathclap can be put around the entire subscript and it gets wrapped in a width-zero box and centered. For extra spacing (since we now made subscript width 0) put \; after the sum, e.g. $\sum_{\mathclap{subscript}}\;$.
+          </p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Embed fonts in pdf the hard way, using ghostscript:</b>    gs -dSAFER -dNOPLATFONTS -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPAPERSIZE=letter -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dCompatibilityLevel=1.4 -dMaxSubsetPct=100 -dSubsetFonts=true -dEmbedAllFonts=true -dUseCIEColor -sOutputFile=newFilename -f initialPdfName
-	  </p>
+          <p>
+            <b>Latexmk continuously compile on save:</b> latexmk -pvc file.tex
+          </p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Authoryear style citation with brackets:</b>   <a href="http://tex.stackexchange.com/a/16792/11839">tex.stackexchange</a>, also see IJCAI15 paper.
-	  </p>
+          <p>
+            <b>Embed fonts in pdf the hard way, using ghostscript:</b>    gs -dSAFER -dNOPLATFONTS -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPAPERSIZE=letter -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dCompatibilityLevel=1.4 -dMaxSubsetPct=100 -dSubsetFonts=true -dEmbedAllFonts=true -dUseCIEColor -sOutputFile=newFilename -f initialPdfName
+          </p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Biblatex remove bib fields::</b> \AtEveryBibItem{ \clearfield{pages}}   <a href="http://tex.stackexchange.com/questions/187643/biblatex-how-can-i-suppress-some-fields-for-multiple-entry-types">tex.stackexchange</a>.
-	  </p>
+          <p>
+            <b>Authoryear style citation with brackets:</b>   <a href="http://tex.stackexchange.com/a/16792/11839">tex.stackexchange</a>, also see IJCAI15 paper.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            <b>Biblatex remove bib fields::</b> \AtEveryBibItem{ \clearfield{pages}}   <a href="http://tex.stackexchange.com/questions/187643/biblatex-how-can-i-suppress-some-fields-for-multiple-entry-types">tex.stackexchange</a>.
+          </p>
         </div>
       </div>
 
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Latex Emacs color bleed:</b>   <a href="http://tex.stackexchange.com/questions/30117/annoyance-in-emacs-latex-mode-involved-with-syntax-highlighting">tex.stackexchange</a>, TLDR: try inserting %$ at EOL.
-	  </p>
+          <p>
+            <b>Latex Emacs color bleed:</b>   <a href="http://tex.stackexchange.com/questions/30117/annoyance-in-emacs-latex-mode-involved-with-syntax-highlighting">tex.stackexchange</a>, TLDR: try inserting %$ at EOL.
+          </p>
         </div>
       </div>
       <hr class='featurette-divider'>
@@ -145,33 +145,30 @@
       <a name="emacs"></a>
       <div class="row featurette">
         <div class="col-md-8">
-	  <h2 class='featurette-heading'>Emacs</h2>
+          <h2 class='featurette-heading'>Emacs</h2>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Edit remote file:</b> C-x C-f /host:path_to_file (alternatively /user@host:path_to_file)
-	  </p>
+          <p>
+            <b>Edit remote file:</b> C-x C-f /host:path_to_file (alternatively /user@host:path_to_file)
+          </p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Set mark:</b> 'C-SPC'
-	    <b>Go to mark:</b> 'C-u C-SPC'	    
-	  </p>
+          <p>
+            <b>Set mark:</b> 'C-SPC'
+            <b>Go to mark:</b> 'C-u C-SPC'	    
+          </p>
         </div>
       </div>
       
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Start Eclim:</b> /Users/ckroer/install/eclipse/Eclipse\ 2.app/Contents/Eclipse/eclimd
-	  </p>
         </div>
       </div>
 
@@ -182,40 +179,40 @@
       <a name="R"></a>
       <div class="row featurette">
         <div class="col-md-8">
-	  <h2 class='featurette-heading'>R language</h2>
+          <h2 class='featurette-heading'>R language</h2>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Load CSV files:</b> matrix_name <- as.matrix(read.csv(file="~/path/to/file", sep=",", header=TRUE))
-	  </p>
+          <p>
+            <b>Load CSV files:</b> matrix_name <- as.matrix(read.csv(file="~/path/to/file", sep=",", header=TRUE))
+          </p>
         </div>
       </div>
 
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Count frequencies of elements in list:</b> t=table(l), where l is the list (this can run into floating point issues since numbers are handled by conversion to string).
-	  </p>
+          <p>
+            <b>Count frequencies of elements in list:</b> t=table(l), where l is the list (this can run into floating point issues since numbers are handled by conversion to string).
+          </p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Install package:</b> install.packages("name")
-	  </p>
+          <p>
+            <b>Install package:</b> install.packages("name")
+          </p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-8">
-	  <p>
-	    <b>Include package:</b> library("name")
-	  </p>
+          <p>
+            <b>Include package:</b> library("name")
+          </p>
         </div>
       </div>
 
@@ -229,7 +226,7 @@
 
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
+         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
